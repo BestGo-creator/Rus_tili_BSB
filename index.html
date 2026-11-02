@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Талант есть у каждого</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header" id="top">
+    <a class="logo" href="#top">ТАЛАНТ<span>+</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">☰</button>
+    <nav id="nav">
+      <a href="#about">О таланте</a>
+      <a href="#talents">Виды талантов</a>
+      <a href="#famous">Известные люди</a>
+      <a href="#discover">Найди свой</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">ТВОИ СПОСОБНОСТИ — ТВОЯ СИЛА</p>
+        <h1>Талант есть<br>у <span>каждого.</span></h1>
+        <p class="hero-text">Не обязательно быть лучшим во всём. Важно найти то, что вдохновляет именно тебя, и смело развивать свои способности.</p>
+        <a class="button" href="#discover">Открыть свой талант <span>↗</span></a>
+      </div>
+      <div class="hero-art" aria-label="Яркая иллюстрация лампочки и звёзд">
+        <div class="sun"></div>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="spark spark-one">✦</div>
+        <div class="spark spark-two">✧</div>
+        <div class="bulb">✦</div>
+        <div class="bulb-base"></div>
+        <div class="art-label">ТВОЯ ИСКРА<br>УЖЕ ВНУТРИ</div>
+      </div>
+      <div class="scroll-note">ЛИСТАЙ ВНИЗ <span>↓</span></div>
+    </section>
+
+    <section class="intro section" id="about">
+      <div class="section-number">01 / ИДЕЯ</div>
+      <div>
+        <h2>У каждого есть<br><span>своя особенность.</span></h2>
+        <p>Талант — это способность делать что-то особенно хорошо или с большим интересом. Кто-то легко рисует, кто-то придумывает идеи, помогает людям, решает сложные задачи или отлично работает в команде.</p>
+        <p>Талант не всегда заметен сразу. Иногда он раскрывается благодаря практике, терпению и смелости попробовать что-то новое.</p>
+      </div>
+      <div class="quote">«Не сравнивай свой путь с чужим. У каждого своя скорость роста.»</div>
+    </section>
+
+    <section class="talents section" id="talents">
+      <div class="section-heading">
+        <div>
+          <div class="section-number">02 / ВОЗМОЖНОСТИ</div>
+          <h2>Талантов <span>много.</span></h2>
+        </div>
+        <p>Посмотри, сколько разных способов проявить себя существует.</p>
+      </div>
+      <div class="talent-grid">
+        <article class="talent-card card-pink">
+          <div class="card-icon">✎</div><span class="card-index">01</span>
+          <h3>Творчество</h3><p>Рисование, музыка, танцы, фотография и создание новых идей.</p>
+        </article>
+        <article class="talent-card card-yellow">
+          <div class="card-icon">⌘</div><span class="card-index">02</span>
+          <h3>Логика</h3><p>Математика, программирование, поиск решений и любопытство.</p>
+        </article>
+        <article class="talent-card card-blue">
+          <div class="card-icon">♡</div><span class="card-index">03</span>
+          <h3>Общение</h3><p>Умение слушать, поддерживать, объяснять и объединять людей.</p>
+        </article>
+        <article class="talent-card card-green">
+          <div class="card-icon">⚡</div><span class="card-index">04</span>
+          <h3>Действие</h3><p>Спорт, лидерство, организация дел и достижение целей.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="famous section" id="famous">
+      <div class="section-heading">
+        <div>
+          <div class="section-number">03 / ВДОХНОВЕНИЕ</div>
+          <h2>Талант, который<br><span>видит весь мир.</span></h2>
+        </div>
+        <p>У каждого из этих людей свой талант. А за большими достижениями стоят труд, практика и вера в себя.</p>
+      </div>
+      <div class="talent-filters" role="group" aria-label="Фильтр по виду таланта">
+        <button class="filter-btn active" type="button" data-filter="all">Все</button>
+        <button class="filter-btn" type="button" data-filter="sport">Спорт</button>
+        <button class="filter-btn" type="button" data-filter="music">Музыка</button>
+        <button class="filter-btn" type="button" data-filter="science">Наука</button>
+        <button class="filter-btn" type="button" data-filter="art">Искусство</button>
+        <button class="filter-btn" type="button" data-filter="technology">Технологии</button>
+      </div>
+      <p class="filter-status" id="filterStatus" aria-live="polite">Показаны все таланты</p>
+      <div class="famous-grid">
+        <article class="famous-card" data-category="sport">
+          <div class="famous-photo photo-ronaldo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cristiano_Ronaldo_2018.jpg" alt="Криштиану Роналду" loading="lazy"></div>
+          <div class="famous-info"><span>СПОРТ</span><h3>Криштиану Роналду</h3><p>Футбольный талант, дисциплина и постоянные тренировки помогли ему стать одним из самых известных игроков мира.</p></div>
+        </article>
+        <article class="famous-card" data-category="sport">
+          <div class="famous-photo photo-messi"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lionel_Messi_20180626.jpg" alt="Лионель Месси" loading="lazy"></div>
+          <div class="famous-info"><span>СПОРТ</span><h3>Лионель Месси</h3><p>Его талант к футболу, точность и умение видеть игру вдохновляют миллионы людей.</p></div>
+        </article>
+        <article class="famous-card" data-category="music">
+          <div class="famous-photo photo-taylor"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Taylor_Swift_at_the_2023_MTV_Video_Music_Awards.png" alt="Тейлор Свифт" loading="lazy"></div>
+          <div class="famous-info"><span>МУЗЫКА</span><h3>Тейлор Свифт</h3><p>Она пишет песни и превращает личные истории в музыку, близкую слушателям по всему миру.</p></div>
+        </article>
+        <article class="famous-card" data-category="science">
+          <div class="famous-photo photo-einstein"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Einstein_Head.jpg" alt="Альберт Эйнштейн" loading="lazy"></div>
+          <div class="famous-info"><span>НАУКА</span><h3>Альберт Эйнштейн</h3><p>Любознательность и необычное мышление помогли ему изменить представления людей о Вселенной.</p></div>
+        </article>
+        <article class="famous-card" data-category="sport">
+          <div class="famous-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Simone_Biles_Rio_2016.jpg" alt="Симона Байлз" loading="lazy"></div>
+          <div class="famous-info"><span>СПОРТ</span><h3>Симона Байлз</h3><p>Одна из самых известных гимнасток мира, которая показывает силу, точность и смелость.</p></div>
+        </article>
+        <article class="famous-card" data-category="music">
+          <div class="famous-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Michael_Jackson_in_1988.jpg" alt="Майкл Джексон" loading="lazy"></div>
+          <div class="famous-info"><span>МУЗЫКА</span><h3>Майкл Джексон</h3><p>Певец и танцор, чьи песни и сценические выступления повлияли на поп-культуру.</p></div>
+        </article>
+        <article class="famous-card" data-category="art">
+          <div class="famous-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Frida_Kahlo,_by_Guillermo_Kahlo.jpg" alt="Фрида Кало" loading="lazy"></div>
+          <div class="famous-info"><span>ИСКУССТВО</span><h3>Фрида Кало</h3><p>Художница, известная яркими автопортретами и своим особенным стилем.</p></div>
+        </article>
+        <article class="famous-card" data-category="technology">
+          <div class="famous-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Steve_Jobs_Headshot_2010-CROP.jpg" alt="Стив Джобс" loading="lazy"></div>
+          <div class="famous-info"><span>ТЕХНОЛОГИИ</span><h3>Стив Джобс</h3><p>Предприниматель, который помог сделать персональные технологии более доступными и удобными.</p></div>
+        </article>
+        <article class="famous-card" data-category="sport">
+          <div class="famous-photo"><img src="./image copy.png" alt="Килиан Мбаппе" loading="lazy"></div>
+          <div class="famous-info"><span>СПОРТ</span><h3>Килиан Мбаппе</h3><p>Скорость, техника и уверенная игра сделали его одним из самых известных футболистов нового поколения.</p></div>
+        </article>
+        <article class="famous-card" data-category="sport">
+          <div class="famous-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Neymar_2018.jpg" alt="Неймар" loading="lazy"></div>
+          <div class="famous-info"><span>СПОРТ</span><h3>Неймар</h3><p>Его футбольный стиль известен дриблингом, фантазией и красивыми комбинациями.</p></div>
+        </article>
+        <article class="famous-card" data-category="sport">
+          <div class="famous-photo"><img src="./image copy 2.png" alt="Серена Уильямс" loading="lazy"></div>
+          <div class="famous-info"><span>СПОРТ</span><h3>Серена Уильямс</h3><p>Одна из величайших теннисисток, прославившаяся силой, упорством и мастерством.</p></div>
+        </article>
+        <article class="famous-card" data-category="sport">
+          <div class="famous-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Usain_Bolt_Rio_100m_final_2016.jpg" alt="Усэйн Болт" loading="lazy"></div>
+          <div class="famous-info"><span>СПОРТ</span><h3>Усэйн Болт</h3><p>Легендарный спринтер, чья скорость и рекорды вдохновили спортсменов по всему миру.</p></div>
+        </article>
+        <article class="famous-card" data-category="sport">
+          <div class="famous-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Michael_Jordan_in_2014.jpg" alt="Майкл Джордан" loading="lazy"></div>
+          <div class="famous-info"><span>СПОРТ</span><h3>Майкл Джордан</h3><p>Баскетбольная легенда, известная талантом, соревновательным характером и работой над собой.</p></div>
+        </article>
+        <article class="famous-card" data-category="music">
+          <div class="famous-photo"><img src="./image.png" alt="Бейонсе" loading="lazy"></div>
+          <div class="famous-info"><span>МУЗЫКА</span><h3>Бейонсе</h3><p>Певица и исполнительница, известная мощным голосом, танцами и яркими выступлениями.</p></div>
+        </article>
+        <article class="famous-card" data-category="music">
+          <div class="famous-photo"><img src="./image copy 4.png" alt="Фредди Меркьюри" loading="lazy"></div>
+          <div class="famous-info"><span>МУЗЫКА</span><h3>Фредди Меркьюри</h3><p>Легендарный вокалист Queen с уникальным голосом и невероятной сценической энергией.</p></div>
+        </article>
+        <article class="famous-card" data-category="music">
+          <div class="famous-photo"><img src="./image copy 3.png" alt="Билли Айлиш" loading="lazy"></div>
+          <div class="famous-info"><span>МУЗЫКА</span><h3>Билли Айлиш</h3><p>Певица, которая создает необычное звучание и пишет песни в собственном стиле.</p></div>
+        </article>
+        <article class="famous-card" data-category="music">
+          <div class="famous-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Beethoven.jpg" alt="Людвиг ван Бетховен" loading="lazy"></div>
+          <div class="famous-info"><span>МУЗЫКА</span><h3>Людвиг ван Бетховен</h3><p>Композитор, чья музыка стала важной частью мировой классической культуры.</p></div>
+        </article>
+        <article class="famous-card" data-category="science">
+          <div class="famous-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Marie_Curie_c1920.jpg" alt="Мария Кюри" loading="lazy"></div>
+          <div class="famous-info"><span>НАУКА</span><h3>Мария Кюри</h3><p>Учёная, чьи исследования радиоактивности изменили физику и химию.</p></div>
+        </article>
+        <article class="famous-card" data-category="science">
+          <div class="famous-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/GodfreyKneller-IsaacNewton-1689.jpg" alt="Исаак Ньютон" loading="lazy"></div>
+          <div class="famous-info"><span>НАУКА</span><h3>Исаак Ньютон</h3><p>Учёный, чьи открытия в физике и математике повлияли на развитие науки.</p></div>
+        </article>
+        <article class="famous-card" data-category="science">
+          <div class="famous-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/N.Tesla.JPG" alt="Никола Тесла" loading="lazy"></div>
+          <div class="famous-info"><span>НАУКА</span><h3>Никола Тесла</h3><p>Изобретатель и инженер, чьи идеи помогли развитию электрических технологий.</p></div>
+        </article>
+        <article class="famous-card" data-category="art">
+          <div class="famous-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg" alt="Винсент ван Гог" loading="lazy"></div>
+          <div class="famous-info"><span>ИСКУССТВО</span><h3>Винсент ван Гог</h3><p>Художник с узнаваемым стилем, яркими цветами и выразительными мазками.</p></div>
+        </article>
+        <article class="famous-card" data-category="art">
+          <div class="famous-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Leonardo_self.jpg" alt="Леонардо да Винчи" loading="lazy"></div>
+          <div class="famous-info"><span>ИСКУССТВО</span><h3>Леонардо да Винчи</h3><p>Художник, изобретатель и исследователь, сочетавший искусство и научный интерес.</p></div>
+        </article>
+        <article class="famous-card" data-category="technology">
+          <div class="famous-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bill_Gates_2017_(cropped).jpg" alt="Билл Гейтс" loading="lazy"></div>
+          <div class="famous-info"><span>ТЕХНОЛОГИИ</span><h3>Билл Гейтс</h3><p>Предприниматель и программист, сыгравший важную роль в развитии персональных компьютеров.</p></div>
+        </article>
+        <article class="famous-card" data-category="technology">
+          <div class="famous-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ada_Lovelace_portrait.jpg" alt="Ада Лавлейс" loading="lazy"></div>
+          <div class="famous-info"><span>ТЕХНОЛОГИИ</span><h3>Ада Лавлейс</h3><p>Математик, чьи идеи считаются важным шагом в истории программирования.</p></div>
+        </article>
+        <article class="famous-card" data-category="technology">
+          <div class="famous-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tim_Berners-Lee.jpg" alt="Тим Бернерс-Ли" loading="lazy"></div>
+          <div class="famous-info"><span>ТЕХНОЛОГИИ</span><h3>Тим Бернерс-Ли</h3><p>Учёный-компьютерщик, создавший Всемирную паутину — основу современного веба.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="discover section" id="discover">
+      <div class="discover-copy">
+        <div class="section-number">04 / ПОПРОБУЙ</div>
+        <h2>А какой талант<br><span>есть у тебя?</span></h2>
+        <p>Ответь на несколько коротких вопросов. Это не экзамен и не точный тест — просто подсказка, с чего можно начать.</p>
+      </div>
+      <div class="quiz-box">
+        <div class="quiz-progress"><span id="progressText">ВОПРОС 1 ИЗ 3</span><div><i id="progressBar"></i></div></div>
+        <h3 id="question">Что тебе больше нравится делать?</h3>
+        <div class="answers" id="answers">
+          <button data-type="creative">Создавать что-то красивое</button>
+          <button data-type="logic">Разгадывать задачи и загадки</button>
+          <button data-type="social">Помогать и общаться с людьми</button>
+          <button data-type="action">Двигаться, выступать и организовывать</button>
+        </div>
+        <p class="quiz-hint" id="quizHint">Выбери один ответ — и продолжим.</p>
+        <div class="quiz-result" id="result" hidden>
+          <div class="result-star">✦</div>
+          <h3 id="resultTitle">Твой талант</h3>
+          <p id="resultText"></p>
+          <button class="button button-dark" id="restart">Пройти ещё раз ↻</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <p class="eyebrow">НЕ БОЙСЯ НАЧИНАТЬ</p>
+      <h2>Твой талант растёт,<br>когда ты <span>действуешь.</span></h2>
+      <p>Пробуй. Учись. Ошибайся. И продолжай идти к тому, что тебе нравится.</p>
+      <a class="button button-dark" href="#top">Начать свой путь ↑</a>
+    </section>
+  </main>
+
+  <footer><a class="logo" href="#top">ТАЛАНТ<span>+</span></a><p>У каждого есть что-то особенное. Найди это.</p><span>© 2026</span></footer>
+</body>
+</html>
